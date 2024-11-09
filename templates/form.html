@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Presentación</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado con el logo -->
+    <div class="header">
+        <img src="static/img/logo.png" alt="Logo" class="logo"> <!-- Logo -->
+    </div>
+
+    <!-- Contenedor principal con la foto de perfil y mensaje -->
+    <div class="container">
+        <img src="static/img/profile-pic.jpg" alt="Foto de Perfil" class="profile-pic">
+        <h1>Yban Veliz</h1> <!-- Nombre -->
+        <p>Bienvenido  GVA Technology Digital Service, Agenda una llamada con nosotros
+            envianos tus datos y recibiras una llamada de nuestra asistente personal IA.</p>
+
+        <!-- Formulario de contacto dentro del contenedor -->
+        <div class="form-container">
+            <h2>Contactar</h2>
+            <form id= "contactForm" action="{{ url_for('submit') }}" method="post">
+                <label for="full_name">Nombre Completo:</label>
+                <input type="text" id="full_name" name="full_name" required><br>
+                
+                <label for="phone_number">Número de Teléfono:</label>
+                <input type="text" id="phone_number" name="phone_number" required><br>
+                
+                <button type="submit" class="submit-button" id="submitButton">Enviar</button>
+            </form>
+            {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+            <div class="flash-message"id="flashMessage">
+            {% for category, message in messages %}
+                <div class="{{ category }}">{{ message }}</div>
+            {% endfor %}
+             </div>
+            {% endif %}
+            {% endwith %}
+
+        </div>
+    </div>
+    
+</body>
+<script src="static/js/scripts.js"></script>
+</html>

@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Encabezado */
+.header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Contenedor principal de la página de presentación */
+.container {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 350px;
+    margin-top: 20px;
+}
+.container p {
+    font-size: 13px;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+/* Foto de perfil más pequeña */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #0073b1;
+}
+
+/* Formulario de contacto dentro del contenedor */
+.form-container {
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 80%;  /* Ajustado el ancho del formulario */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título del formulario */
+.form-container h2 {
+    color: white;
+    font-size: 18px; /* Ajustado el tamaño */
+    margin-bottom: 10px;
+}
+
+/* Campos de entrada */
+.form-container label {
+    font-size: 14px;
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+.form-container input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #0073b1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    background-color: transparent;
+    color: white;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+}
+
+/* Botón de envío en 3D */
+.submit-button {
+    width: 60%;
+    padding: 8px;
+    background-color: #0073b1;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #005f84;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(2px);
+}
+
+/* Cambio de color y texto del botón */
+.submit-button.sent {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    transform: none; /* Elimina el efecto 3D */
+}
+
+/* Animación para hacer desaparecer el botón */
+.submit-button.sent-text {
+    content: "Enviado"; /* Cambiar texto a 'Enviado' */
+}
+.flash-message {
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.flash-message.show {
+    opacity: 1;
+    visibility: visible;
+    display: block; /* Asegura que el mensaje esté visible al agregar 'show' */
+}
