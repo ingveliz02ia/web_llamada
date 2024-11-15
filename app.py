@@ -19,8 +19,11 @@ def submit():
     phone_number = request.form['phone_number']
 
     # Configura la URL del webhook de tu escenario de Make
-    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be'
-    #webhook_urlA = 'http://127.0.0.1:3000/receive-data'
+    
+    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be' #make
+    webhook_urlB = 'datosiniciales-production.up.railway.app/receive-data' #funciono
+    #webhook_urlA = 'https://2c46-209-45-58-245.ngrok-free.app/receive-data'# Quisimos agregarle alservidor no se logro
+        
 
     # Datos a enviar al webhook
     data = {
@@ -28,15 +31,17 @@ def submit():
         'email': email,
         'phone_number': phone_number
     }
-
     # Enviar datos al webhook usando una solicitud POST
     response = requests.post(webhook_urlA, json=data)
+    response = requests.post(webhook_urlB, json=data)
     if response.status_code == 200:
         flash ('¡Mensaje enviado con éxito!', 'success')
     else:
         flash ('Error al enviar los datos', 'error')
 
     return redirect(url_for('form'))
+
+
     
 if __name__ == '__main__':
     #app.run(debug=True)
