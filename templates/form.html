@@ -16,7 +16,8 @@
     <!-- Contenedor principal con la foto de perfil y mensaje -->
     <div class="container">
         <img src="static/img/profile-pic.jpg" alt="Foto de Perfil" class="profile-pic">
-        <h1>Yban Veliz</h1> <!-- Nombre -->
+        <h1>GVA Technology Digital</h1> 
+        <h2>Asesoria Personalizada con IA</h2><!-- Nombre -->
         <p>Bienvenido  GVA Technology Digital Service, Agenda una llamada con nosotros
             envianos tus datos y recibiras una llamada de nuestra asistente personal IA.</p>
 
@@ -40,7 +41,7 @@
             <div class="flash-message"id="flashMessage">
             {% for category, message in messages %}
                 <div class="{{ category }}">{{ message }}</div>
-                
+
             {% endfor %}
              </div>
             {% endif %}
