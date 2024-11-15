@@ -14,25 +14,28 @@ def form():
 # Ruta para procesar el formulario y enviar datos al webhook
 @app.route('/submit', methods=['POST'])
 def submit():
-    full_name = request.form['full_name']
+    name = request.form['full_name']
+    email = request.form['email_name']
     phone_number = request.form['phone_number']
 
     # Configura la URL del webhook de tu escenario de Make
-    webhook_url = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be'
+    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be'
+    #webhook_urlA = 'http://127.0.0.1:3000/receive-data'
 
     # Datos a enviar al webhook
     data = {
-        'full_name': full_name,
+        'name': name,
+        'email': email,
         'phone_number': phone_number
     }
 
     # Enviar datos al webhook usando una solicitud POST
-    response = requests.post(webhook_url, json=data)
+    response = requests.post(webhook_urlA, json=data)
     if response.status_code == 200:
         flash ('¡Mensaje enviado con éxito!', 'success')
     else:
         flash ('Error al enviar los datos', 'error')
-    
+
     return redirect(url_for('form'))
     
 if __name__ == '__main__':
