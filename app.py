@@ -20,9 +20,11 @@ def submit():
     phone_number = request.form['phone_number']
 
     # Configura la URL del webhook de tu escenario de Make
-    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be' # make
-    webhook_urlB = 'https://datosiniciales-production.up.railway.app/receive-data' # funcionó
-    # webhook_urlA = 'https://2c46-209-45-58-245.ngrok-free.app/receive-data' # Quisimos agregarle al servidor no se logró
+    
+    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be' #make
+    webhook_urlB = 'datosiniciales-production.up.railway.app/receive-data' #funciono
+    #webhook_urlA = 'https://2c46-209-45-58-245.ngrok-free.app/receive-data'# Quisimos agregarle alservidor no se logro
+        
 
     # Datos a enviar al webhook
     data = {
