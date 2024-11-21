@@ -19,16 +19,19 @@
         <h1>GVA Technology Digital</h1> 
         <h2>Asesoria Personalizada con IA</h2><!-- Nombre -->
         <p>Bienvenido  GVA Technology Digital Service, Agenda una llamada con nosotros
-            envianos tus datos y recibiras una llamada de nuestra asistente personal IA.</p>
+            envíanos tus datos y recibirás una llamada de nuestra asistente personal IA.</p>
 
         <!-- Formulario de contacto dentro del contenedor -->
         <div class="form-container">
             <h2>Contactar</h2>
-            <form id= "contactForm" action="{{ url_for('submit') }}" method="post">
-                <label for="full_name">Nombre Completo:</label>
-                <input type="text" id="full_name" name="full_name" required><br>
+            <form id="contactForm" action="{{ url_for('submit') }}" method="post">
+                <label for="first_name">Nombres:</label>
+                <input type="text" id="first_name" name="first_name" required><br>
 
-                <label for="email_name">Correo Electronico:</label>
+                <label for="last_name">Apellidos:</label>
+                <input type="text" id="last_name" name="last_name" required><br>
+
+                <label for="email_name">Correo Electrónico:</label>
                 <input type="email" id="email_name" name="email_name" required><br>
                 
                 <label for="phone_number">Número de Teléfono:</label>
@@ -38,15 +41,13 @@
             </form>
             {% with messages = get_flashed_messages(with_categories=True) %}
             {% if messages %}
-            <div class="flash-message"id="flashMessage">
+            <div class="flash-message" id="flashMessage">
             {% for category, message in messages %}
                 <div class="{{ category }}">{{ message }}</div>
-
             {% endfor %}
              </div>
             {% endif %}
             {% endwith %}
-
         </div>
     </div>
     

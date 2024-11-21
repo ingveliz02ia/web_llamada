@@ -1,2 +1,4 @@
 virtual
 *.pyc
+form copy.html
+app copy.py
