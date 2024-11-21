@@ -164,11 +164,11 @@ body {
 /* Media Query para dispositivos móviles */
 @media (max-width: 600px) {
     .logo {
-        width: 80px; /* Ajustar según sea necesario */
+        width: 70px; /* Ajustar según sea necesario */
     }
     
     .container {
-        max-width: 100%; /* Ajustar el ancho máximo del contenedor */
+        max-width: 80%; /* Ajustar el ancho máximo del contenedor */
     }
     
     .profile-pic {
@@ -177,7 +177,7 @@ body {
     }
     
     .form-container input {
-        width: 100%; /* Asegurar que los inputs ocupen el ancho completo en móviles */
+        width: 80%; /* Asegurar que los inputs ocupen el ancho completo en móviles */
     }
     
     .submit-button {
