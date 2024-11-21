@@ -1,4 +1,5 @@
 virtual
 *.pyc
-form copy.html
+static/css/styles copy.css
+templates/form copy.html
 app copy.py

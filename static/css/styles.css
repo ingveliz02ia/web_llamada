@@ -22,11 +22,6 @@ body {
     color: white;
 }
 
-/* Logo */
-.logo {
-    width: 150px; /* Tamaño predeterminado del logo */
-}
-
 /* Contenedor principal de la página de presentación */
 .container {
     text-align: center;
@@ -164,4 +159,28 @@ body {
     opacity: 1;
     visibility: visible;
     display: block; /* Asegura que el mensaje esté visible al agregar 'show' */
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 600px) {
+    .logo {
+        width: 80px; /* Ajustar según sea necesario */
+    }
+    
+    .container {
+        max-width: 100%; /* Ajustar el ancho máximo del contenedor */
+    }
+    
+    .profile-pic {
+        width: 80px; /* Ajustar el tamaño de la foto de perfil */
+        height: 80px;
+    }
+    
+    .form-container input {
+        width: 100%; /* Asegurar que los inputs ocupen el ancho completo en móviles */
+    }
+    
+    .submit-button {
+        width: 80%; /* Ajustar el ancho del botón de envío */
+    }
 }
