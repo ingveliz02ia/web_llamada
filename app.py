@@ -21,7 +21,7 @@ def submit():
 
     # Configura la URL del webhook de tu escenario de Make
     
-    webhook_urlA = 'https://hook.eu2.make.com/dbxyau9e7ho5113994doa2acutm4n3be' #make
+    webhook_urlA = 'https://hook.eu2.make.com/166lob9xw6acc3u5y72y31rh3ke1dr9n' #make
     webhook_urlB = 'https://datosiniciales-production.up.railway.app/receive-data' #funciono
     #webhook_urlA = 'https://2c46-209-45-58-245.ngrok-free.app/receive-data'# Quisimos agregarle alservidor no se logro
         
